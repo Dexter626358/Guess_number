@@ -5,13 +5,13 @@ public class GuesNumber {
     public static void main(String[] args) {
 
         System.out.println("Guess number.");
-        int range = 10;
-        int number = (int)(Math.random() * range);
-        playLevel(range, number);
+        for (int i = 10; i <= 30; i+= 10) playLevel(i);
+        System.out.println("You have won");
         scan.close();
     }
 
-    private static void playLevel(int range, int number) {
+    private static void playLevel(int range) {
+        int number = (int)(Math.random() * range);
         while(true){
             System.out.println("Guess number from 1 to " + range);
             int guessNumber = scan.nextInt();
